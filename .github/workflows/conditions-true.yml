@@ -31,8 +31,8 @@ jobs:
    if: github.event_name != 'pull_request'
    runs-on: ubuntu-latest
    steps:
-      - name: this will only runs on push 
-        run: echo "only run on push "
+     - name: this will only runs on push 
+       run: echo "only run on push "
 
       - name: step with continue-on-error
        run: |
