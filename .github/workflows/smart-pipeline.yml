@@ -5,27 +5,27 @@ on:
 
 jobs:
   lint-tester:
-     runs-on: ubuntu-latest
-     steps:
-       - name: checkout the code
-         uses:  actions/checkout@v4
-
-
-       - name: setup python
-         uses: actions/setup-python@v5
-        with:
-         python-version: 3.12
-
-       - name: Installing dependencies
-         run: pip install -r requirement.txt
-
-       - name: run linter
-         run: flake8 app.py
-  test:
     runs-on: ubuntu-latest
     steps:
-      - name: test
-        run: echo "Testingg"
+      - name: checkout the code
+        uses:  actions/checkout@v4
+
+
+      - name: setup python
+        uses: actions/setup-python@v5
+       with:
+         python-version: 3.12
+
+      - name: Installing dependencies
+        run: pip install -r requirement.txt
+
+      - name: run linter
+        run: flake8 app.py
+  test:
+   runs-on: ubuntu-latest
+   steps:
+     - name: test
+       run: echo "Testingg"
 
   summary:
      runs-on: ubuntu-latest
