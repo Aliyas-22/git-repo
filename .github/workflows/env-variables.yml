@@ -11,12 +11,12 @@ jobs:
       ENVIRONMENT: staging
     runs-on: ubuntu-latest
     steps:
-       - name: print all the env
+      - name: print all the env
         env:
-          VERSION: 1.0.0
-          run: |
-            echo "workflow level enviroment:$APP_NAME"
-            echo "job level enviroment:$ENVIRONMENT"
-            echo "step level version:$VERSION"
-            echo "commit id(sha):${{ github.sha }}"
-            echo "user(Actor):${{ github.actor }}"
+           VERSION: 1.0.0
+        run: |
+          echo "workflow level enviroment:$APP_NAME"
+          echo "job level enviroment:$ENVIRONMENT"
+          echo "step level version:$VERSION"
+          echo "commit id(sha):${{ github.sha }}"
+          echo "user(Actor):${{ github.actor }}"
