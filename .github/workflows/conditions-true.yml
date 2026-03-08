@@ -28,9 +28,9 @@ jobs:
        run: echo "Previous step failed"
 
   to-push:
-    if: github.event_name != 'pull_request'
-    runs-on: ubuntu-latest
-    steps:
+   if: github.event_name != 'pull_request'
+   runs-on: ubuntu-latest
+   steps:
       - name: this will only runs on push 
         run: echo "only run on push "
 
